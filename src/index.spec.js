@@ -1,7 +1,15 @@
 'use strict';
 
-global.console = {
-  log: jest.fn(),
-};
+describe('<index>', () => {
+  global.console = {
+    log: jest.fn(),
+  };
 
-expect(console.log).toBeCalled();
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('calls console', () => {
+    expect(console.log).toBeCalled();
+  });
+});
