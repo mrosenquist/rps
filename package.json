@@ -1,0 +1,79 @@
+{
+  "scripts": {
+    "start": "parcel index.js",
+    "build": "parcel build index.js",
+    "cypress:open": "cypress open",
+    "test:security": "nsp check --reporter summary",
+    "test": "jest --coverage",
+    "test:no-coverage": "jest",
+    "lint": "eslint --color --ext .jsx,.js,.spec.jsx src",
+    "lint:fix": "eslint --color --ext .jsx,.js,.spec.jsx src --fix",
+    "precommit": "lint-staged",
+    "prepush": "jest"
+  },
+  "devDependencies": {
+    "cypress": "^1.4.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.7.0",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "lint-staged": "^6.0.1",
+    "nsp": "^3.1.0",
+    "parcel-bundler": "^1.5.0"
+  },
+  "name": "rps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mrosenquist/rps.git",
+  "author": "Matt Rosenquist <mrosenquist@andigitial.com>",
+  "license": "MIT",
+  "private": false,
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "moduleDirectories": [
+      "<rootDir>/src",
+      "node_modules"
+    ],
+    "cacheDirectory": "./node_modules/.cache/jest",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!{node_modules,coverage,dist}/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 1,
+        "functions": 1,
+        "lines": 1,
+        "statements": 1
+      }
+    },
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "coverageDirectory": "coverage"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "eslint-plugin-jsx-a11y"
+    ]
+  }
+}
