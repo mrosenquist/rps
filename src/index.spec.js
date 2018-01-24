@@ -10,6 +10,7 @@ describe('<index>', () => {
   });
 
   it('calls console', () => {
-    expect(console.log).toBeCalled();
+    require('./index'); // eslint-disable-line global-require
+    expect(console.log).toBeCalled(); // eslint-disable-line no-console
   });
 });
