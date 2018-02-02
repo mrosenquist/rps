@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html class="no-js">
-<head>
+<head lang="en-GB">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rock - Paper - Scissors</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./assets/static/main.scss" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/static/favicon-16x16.png">
+    <link rel="manifest" href="./assets/static/manifest.json">
+    <link rel="mask-icon" href="./assets/static/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#000000">
 </head>
 <body>
-    <script src="./index.js"></script>
+    <header>
+        <h1>Rock - Paper - Scissors</h1>
+    </header>
+    <main>
+        <section id="chooseGame" class="rps rps--game-changer">
+            <h2>Choose game:</h2>
+            <div class="button-container">
+                <div id="gamePlayerVsComputer" class="button-container__button">You vs Computer</div>
+                <div id="gameComputerVsComputer" class="button-container__button">Computer vs Computer</div>
+            </div>
+        </section>
+
+        <section id="chooseGesture" class="rps rps--play">
+            <h2>Play your hand:</h2>
+            <div class="choose">
+                <div id="chooseRock" class="choose__choice choose__choice-rock">
+                    <img src="./assets/static/rock.png"/>
+                </div>
+                <div id="choosePaper" class="choose__choice choose__choice--paper">
+                    <img src="./assets/static/paper.png"/>
+                </div>
+                <div id="chooseScissors" class="choose__choice choose__choice--scissors">
+                    <img src="./assets/static/scissors.png"/>
+                </div>
+            </div>
+        </section>
+
+        <section id="loading" class="rps rps--wait loading">
+            <img class="loading__display loading__display--wave-left" src="./assets/static/rock.png"/>
+            <img class="loading__display loading__display--wave-right" src="./assets/static/rock.png"/>
+            <div class="loading__display loading__display--count">&nbsp;</div>
+        </section>
+
+        <section id="result" class="rps rps--result result">
+            <div class="result__gesture result__gesture--left">
+                <img class="result__image result__image--left-rock" src="./assets/static/rock.png"/>
+                <img class="result__image result__image--left-paper" src="./assets/static/paper.png"/>
+                <img class="result__image result__image--left-scissors" src="./assets/static/scissors.png"/>
+                Player 1
+            </div>
+            <div class="result__gesture result__gesture--right">
+                <img class="result__image result__image--right-rock" src="./assets/static/rock.png"/>
+                <img class="result__image result__image--right-paper" src="./assets/static/paper.png"/>
+                <img class="result__image result__image--right-scissors" src="./assets/static/scissors.png"/>
+                Player 2
+            </div>
+            <div id="resultWin" class="result__output result__output--win">Player 1 Win</div>
+            <div id="resultDraw" class="result__output result__output--draw">Draw</div>
+            <div id="resultLose" class="result__output result__output--lose">Player 1 Loses</div>
+            <button id="reset" class="result__restart">Play again</button>
+        </section>
+    </main>
+    <footer>Developed by <a href="https://www.linkedin.com/in/mattrosenquist/">Matt Rosenquist</a></footer>
 </body>
 </html>

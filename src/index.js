@@ -1,5 +1,9 @@
 'use strict';
 
+const app = require('./app/index');
+
 (() => {
-  console.log('test');
+  document.addEventListener('DOMContentLoaded', () => {
+    app.run('rsp');
+  });
 })();

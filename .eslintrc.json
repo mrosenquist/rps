@@ -7,7 +7,7 @@
     "ecmaFeatures": {
       "jsx": false
     },
-    "impliedStrict": false
+    "impliedStrict": true
   },
   "env": {
     "browser": true,
