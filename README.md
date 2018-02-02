@@ -30,8 +30,9 @@ An implementation of Rock, Paper, Scissors
  
 ### If time was no option 
  * E2E Cypress in CI
- * Security Headers (However content would need to be served using a HTTPD server)
+ * Security Headers (However content would need to be served using a HTTPD server e.g. Express, Nginx)
+ * Scan security headers using [ahead](https://github.com/mrosenquist/ahead) 
  
  ### Attribution
  * Hand images from wikipedia
- * Quick generation of Favicon / Shortcuts using [https://realfavicongenerator.net]](realfavicongenerator) 
+ * Quick generation of Favicon / Shortcuts using [realfavicongenerator](https://realfavicongenerator.net)
