@@ -15,35 +15,36 @@ class App {
   }
 
   init() {
-    this.hookEvents();
     this.mapInterface();
+    this.hookEvents();
     this.showGameChanger();
     return this;
   }
 
   hookEvents() {
+    const self = this;
     document
       .getElementById('gamePlayerVsComputer')
       .addEventListener('click', (event) => {
         event.preventDefault();
-        this.showGestureChooser()
-          .then(gesture => Promise.all([gesture, this.showLoading()]))
-          .then(([gesture]) => this.showResult(runner.playPersonVsComputer(gesture)))
-          .catch(() => this.showGameChanger());
+        return self.showGestureChooser()
+          .then(gesture => Promise.all([gesture, self.showLoading()]))
+          .then(([gesture]) => self.showResult(runner.playPersonVsComputer(gesture)))
+          .catch(() => self.showGameChanger());
       });
     document
       .getElementById('gameComputerVsComputer')
       .addEventListener('click', (event) => {
         event.preventDefault();
-        this.showLoading()
-          .then(() => this.showResult(runner.playComputerVsComputer()))
-          .catch(() => this.showGameChanger());
+        return self.showLoading()
+          .then(() => self.showResult(runner.playComputerVsComputer()))
+          .catch(() => self.showGameChanger());
       });
     document
       .getElementById('reset')
       .addEventListener('click', (event) => {
         event.preventDefault();
-        this.showGameChanger();
+        self.showGameChanger();
       });
   }
 
@@ -82,7 +83,7 @@ class App {
         resultId = 'resultLose';
         break;
       default:
-        break;
+        throw new Error('Bad result');
     }
 
     document.getElementById(resultId).style.display = 'flex';
@@ -105,7 +106,8 @@ class App {
 
     return new Promise((resolve) => {
       const choices = document.getElementsByClassName('choose__choice');
-      const listeners = Array.prototype.map.call(choices, element => element.addEventListener('click', () => {
+      let listeners = [];
+      listeners = Array.prototype.map.call(choices, element => element.addEventListener('click', () => {
         Array.prototype.map.call(choices, (ele, index) => {
           // eslint-disable-next-line security/detect-object-injection
           ele.removeEventListener('click', listeners[index]);
