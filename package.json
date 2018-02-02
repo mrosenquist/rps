@@ -10,7 +10,7 @@
     "lint": "eslint --color --ext .jsx,.js,.spec.jsx src",
     "lint:fix": "eslint --color --ext .jsx,.js,.spec.jsx src --fix",
     "precommit": "lint-staged",
-    "prepush": "jest"
+    "prepush": "jest && cypress run"
   },
   "devDependencies": {
     "cypress": "^1.4.1",
