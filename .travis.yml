@@ -21,7 +21,7 @@ script:
   - yarn lint
   - yarn test
   - yarn test:security
-#  - yarn test:e2e
+  - yarn test:e2e
   - sonar-scanner
 cache:
   yarn: true
