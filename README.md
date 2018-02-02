@@ -1,7 +1,6 @@
 # RPS
 
-An implementation of Rock, Paper, Scissors
-
+*An implementation of Rock, Paper, Scissors*
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/mrosenquist/rps.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/mrosenquist/rps.svg?branch=master)](https://travis-ci.org/mrosenquist/rps)
