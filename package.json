@@ -2,7 +2,8 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --no-minify --public-url ./",
-    "cypress:open": "cypress open",
+    "start:e2e": "cypress open",
+    "test:e2e": "cypress run",
     "test:security": "nsp check --reporter summary",
     "test": "jest --coverage",
     "test:no-coverage": "jest",
@@ -82,5 +83,7 @@
       "eslint-plugin-jsx-a11y"
     ]
   },
-  "eslintIgnore": ["dist/**"]
+  "eslintIgnore": [
+    "dist/**"
+  ]
 }

@@ -14,10 +14,13 @@ addons:
       secure: "R6tVaCeVohmC9V5rryEUXjDLm3YHk2irE094BO9G1ynvrbEAaWNwa7zKpVIAk+iwyeiWvMUZqaukeXWIHQPk5j6hLxgQNlg0xAXvb4VWOVVCqlcuKvwYJEdvMk5fS65vv+NiBndHPrxtdS7rndPYV+ScAOPUQ0XdsVhXkxpD9ca1nj9hMQvbvR6mPn8QLktZnMOMh7rQ7NaCYxb4cx6cORLc3z0rR2n4w01QkBVsHT+dWNGwS1HHfrEAazIgkOijPBRwjHtQOti3yAVNoOUAUMinxluj/eA6ZW5OprmsKM1OfZy/K2K2dwa+Hsm7j6dZnDWp1jy8gjXdsR2CdSN5g91OA0sj9+YA4kBVL4vmURPkKgiSpXzUOwxSyr1sg0G4c+EBRBLLnUE/iGPz8kQrzTBV3XSS36BuOxXSux/rCIe+/6SPyeDB0CLSzyzM7ku3qyT3G1ZKe7NRrR2Y6kMJ7akZxQnIDKHsyZ1mNtXZZeiwOS1Mil8kTd6aTkaBg7Kyd8v2NkA+iPCwIno0uYHZeDLF8YtJ/WrA6fSWnbyt4003/CFQ0l6jnTF1m/9hPgT8GvOmECAK9Zz1NrPmolX9sCWvgS5ee33FNU8EGibtoWcsZQS4jC3MLzwZhBosoPV4Xx50TIG4ZZYqjRLV/Efb5QGMYl8bWxIhLCckjcO43IM="
     branches:
       - master
+before_script:
+  - yarn start -- --silent &
 script:
   - yarn lint
   - yarn test
   - yarn test:security
+  - yarn test:e2e
   - sonar-scanner
 cache:
   yarn: true

@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({46:[function(require,module,exports) {
+})({18:[function(require,module,exports) {
 'use strict';
 
 class Gesture {
@@ -80,7 +80,7 @@ class Gesture {
 
 module.exports = Gesture;
 
-},{}],42:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 'use strict';
 
 module.exports = {
@@ -89,7 +89,7 @@ module.exports = {
   RESULT_LOSE: -1,
 };
 
-},{}],43:[function(require,module,exports) {
+},{}],15:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -115,7 +115,7 @@ class Paper extends Gesture {
 
 module.exports = Paper;
 
-},{"./gesture.interface":46,"../constants":42}],44:[function(require,module,exports) {
+},{"./gesture.interface":18,"../constants":14}],17:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -141,7 +141,7 @@ class Rock extends Gesture {
 
 module.exports = Rock;
 
-},{"./gesture.interface":46,"../constants":42}],45:[function(require,module,exports) {
+},{"./gesture.interface":18,"../constants":14}],16:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -167,7 +167,7 @@ class Scissors extends Gesture {
 
 module.exports = Scissors;
 
-},{"./gesture.interface":46,"../constants":42}],41:[function(require,module,exports) {
+},{"./gesture.interface":18,"../constants":14}],13:[function(require,module,exports) {
 'use strict';
 
 const Paper = require('./model/paper');
@@ -237,7 +237,7 @@ class Runner {
 
 module.exports = Runner;
 
-},{"./model/paper":43,"./model/rock":44,"./model/scissors":45}],40:[function(require,module,exports) {
+},{"./model/paper":15,"./model/rock":17,"./model/scissors":16}],12:[function(require,module,exports) {
 'use strict';
 
 const RPSRunner = require('../domain/rps/Runner');
@@ -255,35 +255,36 @@ class App {
   }
 
   init() {
-    this.hookEvents();
     this.mapInterface();
+    this.hookEvents();
     this.showGameChanger();
     return this;
   }
 
   hookEvents() {
+    const self = this;
     document
       .getElementById('gamePlayerVsComputer')
       .addEventListener('click', (event) => {
         event.preventDefault();
-        this.showGestureChooser()
-          .then(gesture => Promise.all([gesture, this.showLoading()]))
-          .then(([gesture]) => this.showResult(runner.playPersonVsComputer(gesture)))
-          //.catch(() => this.showGameChanger());
+        return self.showGestureChooser()
+          .then(gesture => Promise.all([gesture, self.showLoading()]))
+          .then(([gesture]) => self.showResult(runner.playPersonVsComputer(gesture)))
+          .catch(() => self.showGameChanger());
       });
     document
       .getElementById('gameComputerVsComputer')
       .addEventListener('click', (event) => {
         event.preventDefault();
-        this.showLoading()
-          .then(() => this.showResult(runner.playComputerVsComputer()))
-          //.catch(() => this.showGameChanger());
+        return self.showLoading()
+          .then(() => self.showResult(runner.playComputerVsComputer()))
+          .catch(() => self.showGameChanger());
       });
     document
       .getElementById('reset')
       .addEventListener('click', (event) => {
         event.preventDefault();
-        this.showGameChanger();
+        self.showGameChanger();
       });
   }
 
@@ -302,7 +303,6 @@ class App {
   }
 
   showResult(results) {
-    console.log(results);
     this.setDisplayOnClass('rps', 'none');
     this.resultPage.style.display = 'block';
 
@@ -323,14 +323,13 @@ class App {
         resultId = 'resultLose';
         break;
       default:
-        break;
+        throw new Error('Bad result');
     }
 
     document.getElementById(resultId).style.display = 'flex';
   }
 
   setDisplayOnClass(className, display) { // eslint-disable-line class-methods-use-this
-    console.log(className);
     const elements = document.getElementsByClassName(className);
     // eslint-disable-next-line no-param-reassign, function-paren-newline
     Array.prototype.map.call(elements, (element) => { element.style.display = display; });
@@ -347,7 +346,8 @@ class App {
 
     return new Promise((resolve) => {
       const choices = document.getElementsByClassName('choose__choice');
-      const listeners = Array.prototype.map.call(choices, element => element.addEventListener('click', () => {
+      let listeners = [];
+      listeners = Array.prototype.map.call(choices, element => element.addEventListener('click', () => {
         Array.prototype.map.call(choices, (ele, index) => {
           // eslint-disable-next-line security/detect-object-injection
           ele.removeEventListener('click', listeners[index]);
@@ -362,7 +362,7 @@ module.exports = {
   run: () => (new App()).init(),
 };
 
-},{"../domain/rps/Runner":41,"../domain/rps/constants":42}],21:[function(require,module,exports) {
+},{"../domain/rps/Runner":13,"../domain/rps/constants":14}],2:[function(require,module,exports) {
 'use strict';
 
 const app = require('./app/index');
@@ -373,4 +373,4 @@ const app = require('./app/index');
   });
 })();
 
-},{"./app/index":40}]},{},[21])
+},{"./app/index":12}]},{},[2])
