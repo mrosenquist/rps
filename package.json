@@ -81,5 +81,6 @@
     "ignore": [
       "eslint-plugin-jsx-a11y"
     ]
-  }
+  },
+  "eslintIgnore": ["dist/**"]
 }
