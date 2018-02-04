@@ -1,7 +1,7 @@
 'use strict';
 
 describe('RPS', () => {
-  describe('Computer VS Computer', () => {
+  describe('Person VS Computer', () => {
     describe('Choose Game', () => {
       it('.should() - assert that <title> is correct', () => {
         cy.visit('http://localhost:1234');
@@ -17,7 +17,20 @@ describe('RPS', () => {
       });
 
       it('.should() - assert that the correct <Click>', () => {
-        cy.get('#gameComputerVsComputer').click();
+        cy.get('#gamePlayerVsComputer').click();
+      });
+    });
+
+    describe('Choose Hand', () => {
+      it('.should() - assert that the Wait <Section> is visible', () => {
+        cy.get('.rps--game-changer').should('not.be.visible');
+        cy.get('.rps--wait').should('not.be.visible');
+        cy.get('.rps--play').should('be.visible');
+        cy.get('.rps--result').should('not.be.visible');
+      });
+
+      it('.should() - assert that the correct <Click>', () => {
+        cy.get('#chooseRock').click();
       });
     });
 
