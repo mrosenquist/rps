@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "rm -f ./dist && parcel src/index.html",
-    "build": "parcel build src/index.html --no-minify --public-url ./",
+    "start": "parcel src/index.html",
+    "build": "rm -f ./dist/* && parcel build src/index.html --no-minify --public-url ./",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run",
     "test:security": "nsp check --reporter summary",
