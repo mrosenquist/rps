@@ -5,13 +5,16 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/mrosenquist/rps.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/mrosenquist/rps.svg?branch=master)](https://travis-ci.org/mrosenquist/rps)
 [![Known Vulnerabilities](https://snyk.io/test/github/mrosenquist/rps/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mrosenquist/rps?targetFile=package.json)
-[![Build Status](https://travis-ci.org/mrosenquist/rps.svg?branch=master)](https://travis-ci.org/mrosenquist/rps)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=mrosenquist.rps)](https://sonarcloud.io/dashboard?id=mrosenquist.rps)
 [![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=mrosenquist.rps)
 [![SonarCloud Bugs](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=mrosenquist.rps)
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=mrosenquist.rps)
 [![Code smells](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=code_smells)](https://sonarcloud.io/component_measures?id=mrosenquist.rps&metric=code_smells)
 [![Technical debt](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=sqale_index)](https://sonarcloud.io/component_measures?id=mrosenquist.rps&metric=sqale_index)
+
+
+### Ways for working
+
 
 
 ### Tools Used:
