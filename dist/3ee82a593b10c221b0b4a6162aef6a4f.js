@@ -115,7 +115,7 @@ class Paper extends Gesture {
 
 module.exports = Paper;
 
-},{"./gesture.interface":18,"../constants":14}],16:[function(require,module,exports) {
+},{"./gesture.interface":18,"../constants":14}],17:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -141,7 +141,7 @@ class Rock extends Gesture {
 
 module.exports = Rock;
 
-},{"./gesture.interface":18,"../constants":14}],17:[function(require,module,exports) {
+},{"./gesture.interface":18,"../constants":14}],16:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -237,7 +237,7 @@ class Runner {
 
 module.exports = Runner;
 
-},{"./model/paper":15,"./model/rock":16,"./model/scissors":17}],12:[function(require,module,exports) {
+},{"./model/paper":15,"./model/rock":17,"./model/scissors":16}],12:[function(require,module,exports) {
 'use strict';
 
 const RPSRunner = require('../domain/rps/Runner');

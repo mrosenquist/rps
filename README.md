@@ -23,7 +23,7 @@
  
 ## Development 
 
-##### _Perquisites_
+##### _Prerequisites_
  * node 8+
  * npm 5+
 
