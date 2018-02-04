@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({7:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 module.exports = {
     "name": "RPS",
     "icons": [
@@ -108,7 +108,7 @@ module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '63615' + '/');
+  var ws = new WebSocket('ws://' + hostname + ':' + '52875' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -209,5 +209,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[21,7])
+},{}]},{},[21,8])
 //# sourceMappingURL=/dist/a10c769bd800aad8e41bc12f972a0703.map
