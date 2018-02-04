@@ -11,7 +11,7 @@
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=mrosenquist.rps)
 [![Code smells](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=code_smells)](https://sonarcloud.io/component_measures?id=mrosenquist.rps&metric=code_smells)
 [![Technical debt](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=sqale_index)](https://sonarcloud.io/component_measures?id=mrosenquist.rps&metric=sqale_index)
-
+[![Known Vulnerabilities](https://snyk.io/test/github/mrosenquist/rps/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mrosenquist/rps?targetFile=package.json)
 
 ### Ways for working
 
