@@ -1,6 +1,6 @@
 # RPS
 
-*An implementation of Rock, Paper, Scissors*
+**An implementation of Rock, Paper, Scissors**
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/mrosenquist/rps.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/mrosenquist/rps.svg?branch=master)](https://travis-ci.org/mrosenquist/rps)
@@ -18,6 +18,10 @@
  
 ## Development 
 
+### Getting started
+ 
+
+
 ### Ways of working
  * Written in Vanilla JavaScript
  * Libraries only used for tests
@@ -28,6 +32,7 @@
  * Keep the solution simple (MVP), however this should be usable, not minimal functional product. Needs to be usable.
  * Support Safari, Chrome, and FF. Should work an majority of browsers due to features used according to [caniuse](https://caniuse.com)
  * Responsive support using [Flexbox](https://caniuse.com/#feat=flexbox) and [Viewport units](https://caniuse.com/#feat=viewport-units)
+ * Run build and commit the file (this is irregular, but for pruposes of demoing without tools, necessary)
 
 ### Build Commands
  * `build` - Bundle the files from `src` to `dist`, no medication or obfuscation, scss files converted to css
@@ -41,10 +46,10 @@
  * `test:security` - Run node security checks
 
 ### If time was no option 
- * Refactor JS and UI to be more cleanly separated
- * Security Headers (However content would need to be served using a HTTPD server e.g. Express, Nginx)
- * Scan security headers using [ahead](https://github.com/mrosenquist/ahead) 
- * Support PWA (would need to be serverd over HTTPS) 
+ - [ ] Refactor JS and UI to be more cleanly separated
+ - [ ] Security Headers (However content would need to be served using a HTTPD server e.g. Express, Nginx)
+ - [ ] Scan security headers using [ahead](https://github.com/mrosenquist/ahead) 
+ - [ ] Support PWA (would need to be serverd over HTTPS) 
  
 ## Development tools used:
  * [YARN](https://yarnpkg.com/lang/en/) - Fast, reliable, and secure dependency management
