@@ -13,34 +13,57 @@
 [![Technical debt](https://sonarcloud.io/api/badges/measure?key=mrosenquist.rps&metric=sqale_index)](https://sonarcloud.io/component_measures?id=mrosenquist.rps&metric=sqale_index)
 [![Known Vulnerabilities](https://snyk.io/test/github/mrosenquist/rps/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mrosenquist/rps?targetFile=package.json)
 
-### Ways of working
-* Written in Vanilla JavaScript
-* Libraries only used for tests
-* A simple JS Bundling tool is used to help keep the files organised
-* Javascript files to be 100% covered by unit test 
-
-### Tools Used:
- * Parcel - A low config bundling tool
- * Jest - Unit test tool (quite to get up and running), (Part of CI)
- * ESlint - The standard in (Part of CI)
-   * AIRBNB Rules - Applied
-   * Security Rules - Applied
- * Github - SCM 
- * Travis CI - Continuous integration tool with support for Sonar Cloud (CI)
- * Sonar Cloud - Static code analyses (Part of CI)
- * NSP - Node security test (Part of CI)
- * Cypress - E2E testing tool, quick to setup (Part of CI)
- * Greenkeeper - Monitors and updates dependencies (Scans GITHUB repo)
- * Snyk - Monitors for vulnerabilities in packages (Scans GITHUB repo)
- * Husky - Tool to help intgrate local githooks for pre-commit and pre-push
-   * Pre-commit - Runs ESLint
-   * Pre-push - Runt Unit and E2E tests
+## Running the built code
+ * open `dist/index.html`
  
+## Development 
+
+### Ways of working
+ * Written in Vanilla JavaScript
+ * Libraries only used for tests
+ * A simple JS Bundling tool is used to help keep the files organised
+ * Javascript files to be 100% covered by unit test 
+ * E2E for main flows 
+ * Code simply (for this application all the logic can be done client side)
+ * Keep the solution simple (MVP), however this should be usable, not minimal functional product. Needs to be usable.
+ * Support Safari, Chrome, and FF. Should work an majority of browsers due to features used according to [caniuse](https://caniuse.com)
+ * Responsive support using [Flexbox](https://caniuse.com/#feat=flexbox) and [Viewport units](https://caniuse.com/#feat=viewport-units)
+
+### Build Commands
+ * `build` - Bundle the files from `src` to `dist`, no medication or obfuscation, scss files converted to css
+ * `lint` -  Run eslint
+ * `lint:fix` - Run eslint with fix flag
+ * `start` - Start development, will allow access to build code on [http://localhost:1234](http://localhost:1234)
+ * `cypress:open` -    cypress open
+ * `test` - Run unit tests
+ * `test:no-coverage` - Run unit tests without coverage, useful for testing individual test  files e.g. yarn run test:no-coverage src/app/index.spec.js
+ * `test:e2e` - Run e2e tests
+ * `test:security` - Run node security checks
+
 ### If time was no option 
+ * Refactor JS and UI to be more cleanly separated
  * Security Headers (However content would need to be served using a HTTPD server e.g. Express, Nginx)
  * Scan security headers using [ahead](https://github.com/mrosenquist/ahead) 
  * Support PWA (would need to be serverd over HTTPS) 
  
-### Attribution
+## Development tools used:
+ * [YARN](https://yarnpkg.com/lang/en/) - Fast, reliable, and secure dependency management
+ * [Parcel](https://parceljs.org) - A low config bundling tool
+ * [Jest](https://facebook.github.io/jest/) - Unit test tool (quite to get up and running), (Part of CI)
+ * [ESlint](https://eslint.org/) - The standard in (Part of CI)
+   * [AIRBNB Rules](https://github.com/airbnb/javascript)
+   * [Security Rules](https://github.com/nodesecurity/eslint-plugin-security)
+ * [Github](https://github.com/mrosenquist/rps) - SCM 
+ * [Travis CI](https://travis-ci.org/mrosenquist/rps) - Continuous integration tool with support for Sonar Cloud (CI)
+ * [Sonar Cloud](https://sonarcloud.io/dashboard?id=mrosenquist.rps) - Static code analyses (Part of CI)
+ * [NSP](https://nodesecurity.io/) - Node security test (Part of CI)
+ * [Cypress](https://www.cypress.io/) - E2E testing tool, quick to setup (Part of CI)
+ * [Greenkeeper](https://greenkeeper.io/) - Monitors and updates dependencies (Scans GITHUB repo)
+ * [Snyk](https://snyk.io/org/mrosenquist-github-marketplace/projects?) - Monitors for vulnerabilities in packages (Scans GITHUB repo)
+ * [Husky](https://github.com/typicode/husky) - Tool to help intgrate local githooks for pre-commit and pre-push
+   * Pre-commit - Runs ESLint
+   * Pre-push - Runt Unit and E2E tests
+ 
+## Attribution
  * Hand images from wikipedia
  * Quick generation of Favicon / Shortcuts using [realfavicongenerator](https://realfavicongenerator.net)

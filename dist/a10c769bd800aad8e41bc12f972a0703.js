@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({11:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 module.exports = {
     "name": "RPS",
     "icons": [
@@ -88,4 +88,4 @@ module.exports = {
     "background_color": "#000000",
     "display": "standalone"
 };
-},{}]},{},[11])
+},{}]},{},[6])
