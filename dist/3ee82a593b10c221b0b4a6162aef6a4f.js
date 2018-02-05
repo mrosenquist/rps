@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({18:[function(require,module,exports) {
+})({37:[function(require,module,exports) {
 'use strict';
 
 class Gesture {
@@ -80,7 +80,7 @@ class Gesture {
 
 module.exports = Gesture;
 
-},{}],14:[function(require,module,exports) {
+},{}],33:[function(require,module,exports) {
 'use strict';
 
 module.exports = {
@@ -89,7 +89,7 @@ module.exports = {
   RESULT_LOSE: -1,
 };
 
-},{}],15:[function(require,module,exports) {
+},{}],36:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -115,7 +115,7 @@ class Paper extends Gesture {
 
 module.exports = Paper;
 
-},{"./gesture.interface":18,"../constants":14}],17:[function(require,module,exports) {
+},{"./gesture.interface":37,"../constants":33}],35:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -141,7 +141,7 @@ class Rock extends Gesture {
 
 module.exports = Rock;
 
-},{"./gesture.interface":18,"../constants":14}],16:[function(require,module,exports) {
+},{"./gesture.interface":37,"../constants":33}],34:[function(require,module,exports) {
 'use strict';
 
 const Gesture = require('./gesture.interface');
@@ -167,7 +167,7 @@ class Scissors extends Gesture {
 
 module.exports = Scissors;
 
-},{"./gesture.interface":18,"../constants":14}],13:[function(require,module,exports) {
+},{"./gesture.interface":37,"../constants":33}],32:[function(require,module,exports) {
 'use strict';
 
 const Paper = require('./model/paper');
@@ -237,7 +237,7 @@ class Runner {
 
 module.exports = Runner;
 
-},{"./model/paper":15,"./model/rock":17,"./model/scissors":16}],12:[function(require,module,exports) {
+},{"./model/paper":36,"./model/rock":35,"./model/scissors":34}],31:[function(require,module,exports) {
 'use strict';
 
 const RPSRunner = require('../domain/rps/Runner');
@@ -362,7 +362,7 @@ module.exports = {
   run: () => (new App()).init(),
 };
 
-},{"../domain/rps/Runner":13,"../domain/rps/constants":14}],2:[function(require,module,exports) {
+},{"../domain/rps/Runner":32,"../domain/rps/constants":33}],21:[function(require,module,exports) {
 'use strict';
 
 const app = require('./app/index');
@@ -373,4 +373,4 @@ const app = require('./app/index');
   });
 })();
 
-},{"./app/index":12}]},{},[2])
+},{"./app/index":31}]},{},[21])
