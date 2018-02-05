@@ -29,7 +29,7 @@
 
 ### Getting started
  
- 1. Install yarn: `npm install -g yarn'
+ 1. Install yarn: `npm install -g yarn`
  1. Clone repo: `git@github.com:mrosenquist/rps.git`
  1. Install development tools: `yarn install`
  1. Start bundler: `yarn start`
