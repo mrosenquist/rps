@@ -96,3 +96,4 @@
 ## Attribution
  * Hand images from wikipedia
  * Quick generation of Favicon / Shortcuts using [realfavicongenerator](https://realfavicongenerator.net)
+
