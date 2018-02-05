@@ -1,18 +1,19 @@
 {
   "extends": ["airbnb-base", "plugin:security/recommended"],
-  "plugins": ["jest", "security"],
+  "plugins": ["jest", "security", "cypress"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "script",
     "ecmaFeatures": {
       "jsx": false
     },
-    "impliedStrict": false
+    "impliedStrict": true
   },
   "env": {
     "browser": true,
     "node": true,
-    "jest/globals": true
+    "jest/globals": true,
+    "cypress/globals": true
   },
   "rules": {
     "import/no-extraneous-dependencies": "off"
