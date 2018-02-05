@@ -52,11 +52,11 @@
  * Keep the solution simple (MVP), however this should be usable, not minimal functional product. Needs to be usable.
  * Support Safari, Chrome, and FF, Mobile Chrome, Mobile Safari. Should work an majority of browsers due to features used according to [caniuse](https://caniuse.com)
  * Responsive support using [Flexbox](https://caniuse.com/#feat=flexbox) and [Viewport units](https://caniuse.com/#feat=viewport-units)
- * Run build and commit the file (this is irregular, but for pruposes of demoing without tools, necessary)
+ * Run `build` and commit the generated files (this is irregular, but for pruposes of demoing without tools, necessary)
  * Where probible use the right tools for the job. CSS for Styling and animarion, HTML for layout / Interface, JS for logic
 
 ### Known issues
- * Mobile Chrome animation issues on the wait
+ * Mobile Chrome animation issues on the wait page
 
 ### Build Commands
  * `build` - Bundle the files from `src` to `dist`, no medication or obfuscation, scss files converted to css
