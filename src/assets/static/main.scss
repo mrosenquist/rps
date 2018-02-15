@@ -1,35 +1,28 @@
 $breakpoint-tablet: 768px;
-
+$blue: rgb(0, 100, 210);
 html {
   margin:0;
   padding: 0;
 }
 
 header {
-  text-align: center;
-  background: slategrey;
+  text-align: left;
+  background: $blue;
   position: fixed;
+  padding: 0 10px;
   top: 0;
   left:0;
   right:0;
-  background: linear-gradient(to bottom, rgba(167,199,220,1) 0%,rgba(133,178,211,1) 100%);
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 18px;
   color: white;
-  text-shadow: 1px 1px 5px #000;
-}
-
-footer {
-  @extend header;
-  bottom: 0;
-  top: unset;
-  line-height: 1.5em;
-
-  a {
-    color: white;
-    :hover {
-      @extend a;
-    }
+  min-height: 60px;
+  h1 {
+    font-weight: normal;
+    //font-size: 18px;
   }
 }
+
 
 main {
   height: 100vh;
@@ -39,12 +32,32 @@ main {
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
-  width: 80%;
-  max-width: 1000px;
-  min-width: 380px;
+  font-family: "Helvetica Neue", Helvetica;
+  color: rgb(74,74,74);
+  padding: 0 10px;
   margin:auto;
-  background: linear-gradient(to bottom, rgba(168,168,168,0.65) 5%,rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%) rgba(0,0,0,0);
+}
+
+.game-area {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
+  //justify-content: space-evenly;
+  //align-items: center;
+
+  &__panel--left {
+    border-right: 3px solid lightgrey;
+  }
+
+  &__panel {
+    padding: 10px;
+    width: 38%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 55vh;
+    //flex-basis: 0;
+  }
 }
 
 .choose {
