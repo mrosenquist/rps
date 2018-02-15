@@ -19,10 +19,8 @@ header {
   min-height: 60px;
   h1 {
     font-weight: normal;
-    //font-size: 18px;
   }
 }
-
 
 main {
   height: 100vh;
@@ -43,20 +41,27 @@ body {
   justify-content: space-evenly;
   flex-wrap: nowrap;
 
-  //justify-content: space-evenly;
-  //align-items: center;
-
   &__panel--left {
     border-right: 3px solid lightgrey;
   }
 
   &__panel {
     padding: 10px;
-    width: 38%;
     flex-grow: 1;
     flex-shrink: 1;
     height: 55vh;
-    //flex-basis: 0;
+  }
+}
+
+.avatars {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+  &__avatar {
+    padding-top: 3vw;
+    flex-grow: 1;
+    flex-shrink: 1;
   }
 }
 
