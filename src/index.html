@@ -15,14 +15,32 @@
 </head>
 <body>
     <header>
-        <h1>Rock - Paper - Scissors</h1>
+        <h1>Rock, Paper, Scissors</h1>
     </header>
     <main>
         <section id="chooseGame" class="rps rps--game-changer">
-            <h2>Choose game:</h2>
-            <div class="button-container">
-                <div id="gamePlayerVsComputer" class="button-container__button">You vs Computer</div>
-                <div id="gameComputerVsComputer" class="button-container__button">Computer vs Computer</div>
+            <div class="game-area">
+                <div class="game-area__panel game-area__panel--left">
+                    <h2>Choose a character and a name</h2>
+                    <div class="avatars">
+                        <div class="avatars__avatar" data-player="boy1">
+                            <img alt="Boy" src="./assets/static/BoyPlayer.png"/>
+                        </div>
+                        <div class="avatars__avatar" data-player="girl1">
+                            <img alt="Girl 1" src="./assets/static/Girl1.png"/>
+                        </div>
+                        <div class="avatars__avatar" data-player="girl2">
+                            <img alt="Girl 2" src="./assets/static/Girl2.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-area__panel">
+                    <h2>Choose game:</h2>
+                    <div class="button-container">
+                        <div id="gamePlayerVsComputer" class="button-container__button">You vs Computer</div>
+                        <div id="gameComputerVsComputer" class="button-container__button">Computer vs Computer</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -66,6 +84,5 @@
             <button id="reset" class="result__restart">Play again</button>
         </section>
     </main>
-    <footer>Developed by <a href="https://www.linkedin.com/in/mattrosenquist/">Matt Rosenquist</a>, hosted by <a href="https://mrosenquist.github.io/rps/">github</a></footer>
 </body>
 </html>

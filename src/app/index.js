@@ -23,6 +23,13 @@ class App {
 
   hookEvents() {
     const self = this;
+    const avatars = document
+      .querySelectorAll('.avatars__avatar[data-player]');
+
+    Array.prototype.map.call(avatars, element => element.addEventListener('click', (event) => {
+      sessionStorage.setItem('player1Avatar', event.currentTarget.getAttribute('data-player'));
+    }));
+
     document
       .getElementById('gamePlayerVsComputer')
       .addEventListener('click', (event) => {

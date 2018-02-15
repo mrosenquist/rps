@@ -16,6 +16,9 @@ const { window } = jsdom;
 
 
 global.window = window;
+global.sessionStorage = {
+  setItem: jest.fn(),
+};
 global.document = window.document;
 global.navigator = {
   userAgent: 'node.js',

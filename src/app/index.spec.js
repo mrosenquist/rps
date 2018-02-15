@@ -7,8 +7,14 @@ const constant = require('../domain/rps/constants');
 let App;
 let promises = [];
 const preventDefault = jest.fn();
+const getAttribute = jest.fn(() => 'boy1');
 const addEventListener = jest.fn((type, callback) => {
-  const out = callback({ preventDefault });
+  const out = callback({
+    preventDefault,
+    currentTarget: {
+      getAttribute,
+    },
+  });
   if (out instanceof Promise) {
     promises.push(out);
   }
@@ -22,9 +28,11 @@ const ele = {
   },
   'class': '', // eslint-disable-line quote-props
   id: '123',
+  getAttribute: jest.fn(),
 };
 document.getElementById = jest.fn(() => (ele));
 document.getElementsByClassName = jest.fn(() => ([ele]));
+document.querySelectorAll = jest.fn(() => ([ele]));
 
 describe('app', () => {
   afterEach(() => {
@@ -43,7 +51,8 @@ describe('app', () => {
 
   test('hookEvent', (done) => {
     App.hookEvents();
-    expect(addEventListener).toHaveBeenCalledTimes(4);
+    expect(sessionStorage.setItem).toHaveBeenCalledWith('player1Avatar', 'boy1');
+    expect(addEventListener).toHaveBeenCalledTimes(5);
     Promise.all(promises).then(() => { done(); });
   });
 
