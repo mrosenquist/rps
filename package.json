@@ -26,7 +26,7 @@
     "lint-staged": "^6.0.1",
     "node-sass": "^4.7.2",
     "nsp": "^3.1.0",
-    "parcel-bundler": "^1.5.0"
+    "parcel-bundler": "^1.10.3"
   },
   "name": "rps",
   "version": "1.0.0",
