@@ -13,7 +13,7 @@
     "prepush": "jest && cypress run"
   },
   "devDependencies": {
-    "cypress": "^1.4.1",
+    "cypress": "^4.0.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-cypress": "^2.0.1",
